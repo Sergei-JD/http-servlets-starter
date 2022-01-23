@@ -1,5 +1,6 @@
 package com.http.servlet;
 
+import com.http.util.UrlPath;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-@WebServlet("/download")
+@WebServlet(UrlPath.DOWNLOAD)
 public class DownloadServlet extends HttpServlet {
 
     @Override

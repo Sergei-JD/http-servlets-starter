@@ -2,6 +2,7 @@ package com.http.servlet;
 
 import com.http.service.TicketService;
 import com.http.util.JspHelper;
+import com.http.util.UrlPath;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/tickets")
+@WebServlet(UrlPath.TICKETS)
 public class TicketServlet extends HttpServlet {
 
     private final TicketService ticketService = TicketService.getInstance();

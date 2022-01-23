@@ -1,5 +1,6 @@
 package com.http.servlet;
 
+import com.http.util.UrlPath;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/first")
+@WebServlet(UrlPath.FIRST)
 public class FirstServlet extends HttpServlet {
 
     @Override

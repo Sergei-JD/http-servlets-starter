@@ -5,12 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="/registration" method="post">
+    <img width="400" height="300" src="${pageContext.request.contextPath}/images/users/image.jpg" alt="User image">
+    <%--<img  width="400" height="300" src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dmlld3xlbnwwfHwwfHw%3D&w=1000&q=80" alt="User image">--%>
+    <%--<audio src=""></audio> для аудио--%>
+    <%--<video src=""></video> для видео--%>
+    <form action="${pageContext.request.contextPath}/registration" method="post" enctype="multipart/form-data">
         <label for="name">Name:
             <input type="text" name="name" id="name">
         </label><br>
         <label for="birthday">Birthday:
-            <input type="date" name="birthday" id="birthday">
+            <input type="date" name="birthday" id="birthday" required>
+        </label><br>
+        <label for="imageId">Image:
+            <input type="file" name="image" id="imageId" required>
         </label><br>
         <label for="emailId">Email:
             <input type="text" name="email" id="emailId">
